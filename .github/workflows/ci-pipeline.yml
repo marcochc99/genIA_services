@@ -17,10 +17,19 @@ jobs:
           python-version: '3.11.9'
 
       - name: Install requirements
-        run:
+        run: |
+          # 1. Actualizar pip por seguridad
           python -m pip install --upgrade pip
-          pip install torch==2.11.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
-          pip install pandas numpy scikit-learn pytest mlflow
+
+          # 2. Instalar primero la versión limpia de PyTorch para CPU en Linux
+          pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cpu
+
+          # 3. Filtrar el archivo requirements.txt borrando la línea de torch en el contenedor
+          # Esto evita que intente buscar la versión local '+cu128'
+          sed -i '/^torch/d' ./python/credit_scoring/requirements.txt
+
+          # 4. Instalar el resto de dependencias (Pandas, MLflow, etc.)
+          pip install -r ./python/credit_scoring/requirements.txt
 
       - name: Run tests
         run: pytest ./python/credit_scoring/tests/test_model_creation.py

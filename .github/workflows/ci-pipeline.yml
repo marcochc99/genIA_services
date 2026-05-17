@@ -17,10 +17,10 @@ jobs:
           python-version: '3.11.9'
 
       - name: Install requirements
-        run:
+        run: |
           python -m pip install --upgrade pip
           pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cpu
-          sed -i '/^torch==/d' ./python/credit_scoring/requirements.txt
+          find . -name "requirements.txt" -exec sed -i '/torch/d' {} +
           pip install -r ./python/credit_scoring/requirements.txt
 
       - name: Run tests

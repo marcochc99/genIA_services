@@ -1058,7 +1058,7 @@ if __name__ == "__main__":
 
 
 """
-Execute from:
+Execute from file path:
 C:\\Users\\santi\\Desktop\\proyectos\\ingeniia_services\\python\\credit_scoring
 
 Commands:

@@ -68,10 +68,11 @@ pycparser==3.0
 pydantic==2.13.4
 pydantic_core==2.46.4
 pyparsing==3.3.2
+pytest==8.4.2
 python-dateutil==2.9.0.post0
 python-dotenv==1.2.2
 pytz==2026.2
-pywin32==311
+pywin32==311; sys_platform == 'win32'
 PyYAML==6.0.3
 requests==2.33.1
 scikit-learn==1.8.0
@@ -84,8 +85,8 @@ sqlparse==0.5.5
 starlette==0.52.1
 sympy==1.14.0
 threadpoolctl==3.6.0
-torch==2.11.0+cu128
-torchvision==0.26.0+cu128
+torch==2.11.0
+torchvision==0.26.0
 typing-inspection==0.4.2
 typing_extensions==4.15.0
 tzdata==2026.2

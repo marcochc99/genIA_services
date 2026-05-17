@@ -17,15 +17,9 @@ jobs:
           python-version: '3.11.9'
 
       - name: Install requirements
-        run: |
-          # 1. Actualizar pip por estabilidad
+        run:
           python -m pip install --upgrade pip
-
-          # 2. Instalar manualmente las librerías principales en su versión de CPU/Linux
           pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cpu
-          
-          # 3. Instalar el resto de dependencias comunes para ciencia de datos y pruebas
-          # Evitamos usar el requirements.txt problemático instalando lo necesario para el test
           pip install pandas numpy scikit-learn pytest mlflow
 
       - name: Run tests

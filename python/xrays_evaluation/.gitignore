@@ -1,0 +1,22 @@
+# python
+*.venv/
+*venv/
+venv/
+.venv/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.pytest_cache
+
+# runs
+reports/runs
+src/training/train/mlruns
+
+# mlflow
+mlruns
+src/training/train/mlflow.db
+
+# Xrays evaluation local outputs
+python/xrays_evaluation/runs/
+python/xrays_evaluation/reports/

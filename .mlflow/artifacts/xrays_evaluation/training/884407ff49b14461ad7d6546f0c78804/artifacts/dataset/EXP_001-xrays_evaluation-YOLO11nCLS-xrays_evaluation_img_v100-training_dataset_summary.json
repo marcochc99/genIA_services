@@ -1,0 +1,29 @@
+{
+  "dataset_path": "D:\\Cursos\\2026\\genIA_services\\datasets\\ingeniia_services_xrays_evaluation_img_v1.0.0_training_20251121\\split_data",
+  "splits": {
+    "train": {
+      "split_dir": "D:\\Cursos\\2026\\genIA_services\\datasets\\ingeniia_services_xrays_evaluation_img_v1.0.0_training_20251121\\split_data\\train",
+      "total_images": 9138,
+      "classes": {
+        "anomaly": 8901,
+        "normal": 237
+      }
+    },
+    "valid": {
+      "split_dir": "D:\\Cursos\\2026\\genIA_services\\datasets\\ingeniia_services_xrays_evaluation_img_v1.0.0_training_20251121\\split_data\\valid",
+      "total_images": 864,
+      "classes": {
+        "anomaly": 850,
+        "normal": 14
+      }
+    },
+    "test": {
+      "split_dir": "D:\\Cursos\\2026\\genIA_services\\datasets\\ingeniia_services_xrays_evaluation_img_v1.0.0_training_20251121\\split_data\\test",
+      "total_images": 435,
+      "classes": {
+        "anomaly": 428,
+        "normal": 7
+      }
+    }
+  }
+}
